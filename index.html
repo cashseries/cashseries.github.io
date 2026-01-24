@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subaru | Composer</title>
+    <meta name="description" content="Roblox Music Composer ➵ 3 Years Exp. Contributed to 150M+ visits">
+    <meta name="keywords" content="Roblox, Music Composer, Soundtrack, SFX, Commissions">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Subaru | Composer">
+    <meta property="og:description" content="Roblox Music Composer ➵ 3 Years Exp. Contributed to 150M+ visits">
+    <meta property="og:image" content="pfp.jpg">
+    <meta property="og:url" content="https://subaru-composer.github.io">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Subaru | Composer">
+    <meta property="twitter:description" content="Roblox Music Composer ➵ 3 Years Exp. Contributed to 150M+ visits">
+    <meta property="twitter:image" content="pfp.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpg" href="pfp.jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="start-overlay">
+        <div class="overlay-content">
+            <h1 class="glitch" data-text="SUBARU">SUBARU</h1>
+            <p>CLICK TO START</p>
+        </div>
+    </div>
+
+    <a href="https://ghostfishh.github.io" target="_blank" class="attribution">Made by ghostfish</a>
+
+    <audio id="bgm" loop><source src="bgm.mp3" type="audio/mp3"></audio>
+
+    <div class="embers-container">
+        <div class="ember"></div><div class="ember"></div><div class="ember"></div>
+        <div class="ember"></div><div class="ember"></div><div class="ember"></div>
+    </div>
+
+    <div id="scroll-progress"></div>
+
+    <nav>
+        <div class="logo">SUBARU<span class="dot">.</span>wav</div>
+        <div class="music-control" id="musicToggle">
+            <div class="equalizer" id="eq">
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+            </div>
+            <span id="music-status">BGM: OFF</span>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="pfp-wrapper">
+                <div class="pfp-glow"></div>
+                <img src="pfp.jpg" alt="Subaru" class="pfp">
+            </div>
+            
+            <div class="hero-text">
+                <div class="badge">ROBLOX COMPOSER</div>
+                <h1 class="glitch" data-text="SUBARU">SUBARU</h1>
+                <p class="bio">Roblox Music Composer ➵ 3 Years Exp.<br>Contributed to 150M+ visits</p>
+                
+                <div class="stats-centered">
+                    <div class="stat-item">
+                        <span>STATUS</span>
+                        <b class="status-online">ONLINE</b>
+                    </div>
+                    <div class="stat-sep"></div>
+                    <div class="stat-item">
+                        <span>MY LOCAL TIME</span>
+                        <b id="local-time">--:-- --</b>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="command-center">
+            <div class="section-title">
+                <h2>01. NOTABLE PROJECTS</h2>
+                <div class="line"></div>
+            </div>
+            <div class="notable-grid">
+                <a href="https://www.roblox.com/games/73257710123935/Poison-Treats" target="_blank" class="game-link-card">
+                    <div class="glitch-small" data-text="POISON TREATS">POISON TREATS</div>
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="https://www.roblox.com/games/82929962070864/Tap-to-Get-Rich" target="_blank" class="game-link-card">
+                    <div class="glitch-small" data-text="TAP TO GET RICH">TAP TO GET RICH</div>
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="https://www.roblox.com/games/81566824074063/Garden-Incremental" target="_blank" class="game-link-card">
+                    <div class="glitch-small" data-text="GARDEN INCREMENTAL">GARDEN INCREMENTAL</div>
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="command-center">
+            <div class="section-title">
+                <h2>02. MY WORK</h2>
+                <div class="line"></div>
+            </div>
+            <div class="hub-grid">
+                <div class="module">
+                    <div class="module-header"><i class="fas fa-volume-up"></i> MY MUSIC</div>
+                    <div class="track-list">
+                        <div class="track-item" data-src="track1.mp3"><span>Sci-Fi Tune</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="track2.mp3"><span>Admin Abuse</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="track3.mp3"><span>Inc Game</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="track4.wav"><span>Poison Treats</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="track5.mp3"><span>Lost Simulator</span><i class="fas fa-play"></i></div>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header"><i class="fas fa-bolt"></i> COMMISSION RATES</div>
+                    <div class="price-body">
+                        <div class="price-row"><span>Soundtrack</span><b>7,000 R$</b></div>
+                        <div class="price-row"><span>HQ SFX</span><b>1,500 R$</b></div>
+                        <div class="price-row"><span>Normal SFX</span><b>1,000 R$</b></div>
+                        <div class="urgency-note">Urgency: +1,000 R$</div>
+                        <p class="payment-methods">I accept Paypal, Crypto, and Robux (Tax covered)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="command-center">
+            <div class="section-title">
+                <h2>03. ABOUT ME</h2>
+                <div class="line"></div>
+            </div>
+            <div class="hub-grid">
+                <div class="module">
+                    <div class="module-header"><i class="fas fa-gamepad"></i> FAVORITE GAMES</div>
+                    <div class="games-slideshow">
+                        <div class="g-card">
+                            <img src="bo3.png" alt="BO3">
+                            <span>BO3</span>
+                        </div>
+                        <div class="g-card">
+                            <img src="rl.png" alt="Rocket League">
+                            <span>Rocket League</span>
+                        </div>
+                        <div class="g-card">
+                            <img src="hitman.png" alt="Hitman">
+                            <span>Hitman</span>
+                        </div>
+                        <div class="g-card">
+                            <img src="uncharted.png" alt="Uncharted 3">
+                            <span>Uncharted 3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header"><i class="fas fa-link"></i> CONNECT</div>
+                    <div class="social-links">
+                        <a href="#" class="s-link"><i class="fab fa-discord"></i> cashseries</a>
+                        <a href="https://www.roblox.com/users/1229378445/profile" target="_blank" class="s-link"><i class="fas fa-cube"></i> My Roblox Profile</a>
+                        <a href="https://soundcloud.com/shush-master" target="_blank" class="s-link"><i class="fab fa-soundcloud"></i> SoundCloud</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>&copy; 2026 SUBARU //</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
