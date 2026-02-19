@@ -169,6 +169,99 @@
                 </div>
             </div>
         </section>
+
+        <!-- ═══════════════════════════════════════════════
+             04. REVIEWS — auto-updating via Netlify + Supabase
+             ═══════════════════════════════════════════════ -->
+        <section class="command-center" id="reviews-section">
+            <div class="section-title">
+                <h2>04. REVIEWS</h2>
+                <div class="line"></div>
+            </div>
+
+            <!-- ── Review Display ── -->
+            <div id="reviews-list" aria-live="polite" aria-label="Client reviews">
+                <div class="reviews-loading">
+                    <span class="reviews-spinner"></span> Loading reviews…
+                </div>
+            </div>
+
+            <!-- ── Submission Form ── -->
+            <div class="module review-form-module">
+                <div class="module-header">
+                    <i class="fas fa-star"></i> LEAVE A REVIEW
+                </div>
+                <div class="review-form-body">
+
+                    <!-- Success / error message -->
+                    <div id="review-submit-msg" class="review-submit-msg hidden" role="alert"></div>
+
+                    <form
+                        name="reviews"
+                        method="POST"
+                        data-netlify="true"
+                        data-netlify-honeypot="bot-field"
+                        id="review-form"
+                        novalidate
+                    >
+                        <!-- Netlify hidden field -->
+                        <input type="hidden" name="form-name" value="reviews">
+
+                        <!-- Honeypot — hidden from real users, bots fill it in -->
+                        <p class="bot-trap" aria-hidden="true">
+                            <label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+                        </p>
+
+                        <!-- Name (optional) -->
+                        <div class="rf-group">
+                            <label class="rf-label" for="review-name">NAME <span class="rf-optional">(optional)</span></label>
+                            <input
+                                type="text"
+                                id="review-name"
+                                name="name"
+                                class="rf-input"
+                                placeholder="Your name or alias…"
+                                maxlength="80"
+                                autocomplete="off"
+                            >
+                        </div>
+
+                        <!-- Star Rating -->
+                        <div class="rf-group">
+                            <span class="rf-label">RATING <span class="rf-required">*</span></span>
+                            <div class="star-rating" role="radiogroup" aria-label="Star rating">
+                                <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="5 stars">★</label>
+                                <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="4 stars">★</label>
+                                <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="3 stars">★</label>
+                                <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">★</label>
+                                <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">★</label>
+                            </div>
+                        </div>
+
+                        <!-- Review Text -->
+                        <div class="rf-group">
+                            <label class="rf-label" for="review-text">
+                                REVIEW <span class="rf-required">*</span>
+                                <span class="char-counter"><span id="char-count">0</span>/800</span>
+                            </label>
+                            <textarea
+                                id="review-text"
+                                name="review-text"
+                                class="rf-textarea"
+                                placeholder="Share your experience working with Subaru…"
+                                maxlength="800"
+                                required
+                                rows="4"
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" id="review-submit-btn" class="rf-submit" disabled>
+                            <i class="fas fa-paper-plane"></i> <span>SUBMIT REVIEW</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>&copy; 2026 SUBARU //</footer>
