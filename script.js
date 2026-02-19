@@ -204,8 +204,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(reviewForm);
 
             try {
-                // Post to current page — more robust on Netlify than hardcoded '/'
-                const postUrl = window.location.pathname;
+                // Post to the dedicated success page — ensures Netlify catches the request
+                const postUrl = '/success.html';
 
                 const res = await fetch(postUrl, {
                     method: 'POST',
