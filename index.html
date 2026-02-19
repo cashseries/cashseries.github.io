@@ -218,9 +218,8 @@
                     <!-- Success / error message -->
                     <div id="review-submit-msg" class="review-submit-msg hidden" role="alert"></div>
 
-                    <form name="reviews" action="/success.html" method="POST" netlify data-netlify-honeypot="bot-field"
+                    <form name="reviews" action="/" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"
                         id="review-form" novalidate>
-                        <!-- Netlify hidden field -->
                         <input type="hidden" name="form-name" value="reviews">
 
                         <!-- Honeypot — hidden from real users, bots fill it in -->
