@@ -204,7 +204,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(reviewForm);
 
             try {
-                const res = await fetch('/', {
+                // Post to current page — more robust on Netlify than hardcoded '/'
+                const postUrl = window.location.pathname;
+
+                const res = await fetch(postUrl, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                     body: new URLSearchParams(formData).toString(),
@@ -217,11 +220,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Refresh reviews after a short delay to allow function to process
                     setTimeout(fetchReviews, 4000);
                 } else {
-                    showMsg('Submission failed. Please try again.', 'error');
+                    console.error(`reviews: submit failed with status ${res.status} ${res.statusText}`);
+                    showMsg(`Submission failed (${res.status}). Please try again.`, 'error');
                 }
             } catch (err) {
-                console.error('reviews: submit error', err);
-                showMsg('Network error. Please try again.', 'error');
+                console.error('reviews: network error', err);
+                showMsg('Network error. Check your connection.', 'error');
             }
 
             submitBtn.querySelector('span').textContent = 'SUBMIT REVIEW';
