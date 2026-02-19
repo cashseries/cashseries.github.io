@@ -204,13 +204,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(reviewForm);
 
             try {
-                // Post to the root page — the most standard Netlify form target
-                const postUrl = '/';
+                // Post to current page - Netlify detects forms best when targeted correctly
+                const postUrl = window.location.pathname;
+
+                // Form detection requires the form-name field to match the registry
+                const searchParams = new URLSearchParams();
+                searchParams.append('form-name', 'reviews'); // form-name MUST be first
+                for (const [key, value] of formData.entries()) {
+                    if (key !== 'form-name') searchParams.append(key, value);
+                }
 
                 const res = await fetch(postUrl, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: new URLSearchParams(formData).toString(),
+                    body: searchParams.toString(),
                 });
 
                 if (res.ok) {
