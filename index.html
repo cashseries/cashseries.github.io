@@ -153,7 +153,91 @@
 
         <section class="command-center">
             <div class="section-title">
-                <h2>03. ABOUT ME</h2>
+                <h2>03. SOUND EFFECTS</h2>
+                <div class="line"></div>
+            </div>
+            <div class="module sfx-module">
+                <div class="module-header sfx-header">
+                    <span style="display:flex;align-items:center;"><i class="fas fa-wave-square"></i> SFX SHOWCASE</span>
+                    <div class="sfx-controls">
+                        <button id="sfx-prev" class="sfx-btn"><i class="fas fa-chevron-left"></i></button>
+                        <span id="sfx-indicator" class="sfx-indicator">1 / 8</span>
+                        <button id="sfx-next" class="sfx-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="track-list sfx-list" id="sfx-slider">
+                    
+                    <!-- Slide 1 -->
+                    <div class="sfx-slide active">
+                        <div class="sfx-category">🖱️ UI Click Sounds</div>
+                        <div class="track-item" data-src="click2.wav"><span>Click 1</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="Click3.wav"><span>Click 2</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="Clicksfcx2.mp3"><span>Click 3</span><i class="fas fa-play"></i></div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="sfx-slide">
+                        <div class="sfx-category">✨ Hover / Rollover Sounds</div>
+                        <div class="track-item" data-src="Hover 1 (1).wav"><span>Hover 1</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="hover 3.wav"><span>Hover 2</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="Hover-Cat2.mp3"><span>Hover 3 (Cat)</span><i class="fas fa-play"></i></div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="sfx-slide">
+                        <div class="sfx-category">💰 Purchase / Buy Confirmation Sounds</div>
+                        <div class="track-item" data-src="purchase.wav"><span>Purchase 1</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="purchase2.wav"><span>Purchase 2</span><i class="fas fa-play"></i></div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="sfx-slide">
+                        <div class="sfx-category">❌ Error / Failed Action Sounds</div>
+                        <div class="track-item" data-src="error noise for purchasing.mp3"><span>Error 1</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="Error noise for purchases.mp3"><span>Error 2</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="Unsuccess2.mp3"><span>Unsuccessful 1</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="Unsuccessful2.mp3"><span>Unsuccessful 2</span><i class="fas fa-play"></i></div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="sfx-slide">
+                        <div class="sfx-category">⬆️ Upgrade / Level-Up Sounds</div>
+                        <div class="track-item" data-src="Upgrade 1.wav"><span>Upgrade 1</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="Upgrade 3.wav"><span>Upgrade 2</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="Upgrade1.mp3"><span>Upgrade 3</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="Upgrade2.mp3"><span>Upgrade 4</span><i class="fas fa-play"></i></div>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="sfx-slide">
+                        <div class="sfx-category">☢️ Nuclear Alert / Warning Sounds</div>
+                        <div class="track-item" data-src="warning.mp3"><span>Warning</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="criticalwarning.mp3"><span>Critical Warning</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="instabilitysounds.mp3"><span>Instability Sounds</span><i class="fas fa-play"></i></div>
+                    </div>
+
+                    <!-- Slide 7 -->
+                    <div class="sfx-slide">
+                        <div class="sfx-category">🐎 Horse / Animal Sound Effects</div>
+                        <div class="track-item" data-src="HorseG2 (updated).mp3"><span>Horse G2</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="HorseGallop(updated).mp3"><span>Horse Gallop</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="HorseT(UPDATED).mp3"><span>Horse Trot</span><i class="fas fa-play"></i></div>
+                        <div class="track-item" data-src="HorseW(updated).mp3"><span>Horse Whinny</span><i class="fas fa-play"></i></div>
+                    </div>
+
+                    <!-- Slide 8 -->
+                    <div class="sfx-slide">
+                        <div class="sfx-category">➕ And Many More!</div>
+                        <div class="sfx-more-text">Custom sounds tailored to your project's precise needs.</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="command-center">
+            <div class="section-title">
+                <h2>04. ABOUT ME</h2>
                 <div class="line"></div>
             </div>
             <div class="hub-grid">
@@ -193,11 +277,11 @@
         </section>
 
         <!-- ═══════════════════════════════════════════════
-             04. REVIEWS — auto-updating via Netlify + Supabase
+             05. REVIEWS — auto-updating via Netlify + Supabase
              ═══════════════════════════════════════════════ -->
         <section class="command-center" id="reviews-section">
             <div class="section-title">
-                <h2>04. REVIEWS</h2>
+                <h2>05. REVIEWS</h2>
                 <div class="line"></div>
             </div>
 

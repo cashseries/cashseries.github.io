@@ -82,6 +82,34 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
 .track-item:hover, .track-item.active { color: var(--accent); }
 .track-item.playing i { color: var(--accent); opacity: 1; }
 
+.sfx-category {
+    padding: 25px 0 10px;
+    font-family: var(--font-head);
+    font-size: 1.1rem;
+    color: var(--accent);
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid #1a1a1a;
+    margin-bottom: 5px;
+}
+.track-list .sfx-category:first-child { padding-top: 5px; }
+.sfx-more-text {
+    padding: 15px 0 10px;
+    color: #777;
+    font-size: 0.85rem;
+    font-style: italic;
+    text-align: center;
+}
+
+.sfx-header { display: flex; justify-content: space-between; align-items: center; }
+.sfx-controls { display: flex; align-items: center; gap: 10px; }
+.sfx-btn { background: none; border: none; color: #555; cursor: pointer; transition: 0.3s; padding: 5px; font-size: 0.9rem; }
+.sfx-btn:hover { color: var(--accent); }
+.sfx-indicator { font-family: var(--font-head); font-size: 0.8rem; color: #888; font-weight: 700; min-width: 40px; text-align: center; }
+
+.sfx-slide { display: none; min-height: 200px; animation: fadeIn 0.3s ease; }
+.sfx-slide.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
 .price-row b { color: #fff; font-family: var(--font-head); font-size: 1rem; }
 .urgency-note { font-size: 0.7rem; color: #ff4444; text-align: center; margin-top: 15px; opacity: 0.8; }
 

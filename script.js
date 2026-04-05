@@ -113,6 +113,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     window.addEventListener('scroll', updateScrollProgress);
+
+    // SFX Slider Logic
+    const sfxSlides = document.querySelectorAll('.sfx-slide');
+    const sfxPrevBtn = document.getElementById('sfx-prev');
+    const sfxNextBtn = document.getElementById('sfx-next');
+    const sfxIndicator = document.getElementById('sfx-indicator');
+    
+    if (sfxSlides.length > 0) {
+        let currentSfxIndex = 0;
+
+        function updateSfxSlider() {
+            sfxSlides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSfxIndex);
+            });
+            sfxIndicator.textContent = `${currentSfxIndex + 1} / ${sfxSlides.length}`;
+        }
+
+        sfxPrevBtn.addEventListener('click', () => {
+            currentSfxIndex = (currentSfxIndex - 1 + sfxSlides.length) % sfxSlides.length;
+            updateSfxSlider();
+        });
+
+        sfxNextBtn.addEventListener('click', () => {
+            currentSfxIndex = (currentSfxIndex + 1) % sfxSlides.length;
+            updateSfxSlider();
+        });
+
+        updateSfxSlider();
+    }
 });
 
 /* ═══════════════════════════════════════════════════════════════
